@@ -1,11 +1,10 @@
 // Task 1 ============================================
 /* Дана строка:'abcde'
 Получите массив букв этой строки.*/
-let a1 = 565;
-
+let a1 = 'abcde';
 function t1() {
-  let str = String(a1);
-  document.querySelector('.out-1').innerHTML = str[0];
+  let arr = a1.split('');
+  document.querySelector('.out-1').innerHTML = arr;
 }
 document.querySelector('.b-1').addEventListener('click', t1);
 
@@ -13,11 +12,12 @@ document.querySelector('.b-1').addEventListener('click', t1);
 /* Дано некоторое число:
 12345
 Получите массив цифр этого числа.*/
-let a2 = 569848;
+let a2 = 12345;
 
 function t2() {
   let str = String(a2);
-  document.querySelector('.out-2').innerHTML = str[str.length - 1];
+  let arr = str.split('');
+  document.querySelector('.out-2').innerHTML = arr;
 }
 document.querySelector('.b-2').addEventListener('click', t2);
 
@@ -25,16 +25,24 @@ document.querySelector('.b-2').addEventListener('click', t2);
 /* Дано некоторое число:
 12345
 Переверните его:*/
-let a3 = 569848;
+let a3 = 12345;
 
-function t2() {
-  let str = String(a2);
-  document.querySelector('.out-2').innerHTML = str[str.length - 1];
-}
-document.querySelector('.b-2').addEventListener('click', t2);
+function t3() {
+  let arr = String(a3).split('').reverse();
 
-function t1() {
-  let str = String(a1);
-  document.querySelector('.out-1').innerHTML = str[0];
+  document.querySelector('.out-3').innerHTML = arr;
 }
-document.querySelector('.b-1').addEventListener('click', t1);
+document.querySelector('.b-3').addEventListener('click', t3);
+
+// Task 4============================================
+/* Дано некоторое число: 12345 Найдите сумму цифр этого числа.*/
+let a4 = 12345;
+function t4() {
+  let arr = String(a4).split('');
+  let summ = 0;
+  for (let item of arr) {
+    summ += Number(item);
+  }
+  document.querySelector('.out-4').innerHTML = summ;
+}
+document.querySelector('.b-4').addEventListener('click', t4);
